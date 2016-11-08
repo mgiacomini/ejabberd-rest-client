@@ -1,8 +1,3 @@
-require 'forwardable'
-require 'json'
-require 'resource_kit'
-require 'faraday'
-require 'active_support/all'
 require 'base64'
 
 module Ejabberd
