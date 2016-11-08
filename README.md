@@ -1,8 +1,6 @@
 # Ejabberd::Rest::Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ejabberd/rest/client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to ejabberd admin client for REST API.
 
 ## Installation
 
@@ -22,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create new client instance, with admin credentials:
+
+```ruby
+ejabberd_admin = Ejabberd::Rest::Client.new(
+   jid: 'admin@im.juster.com.br', 
+   password: '****',
+   ejabberd_api: 'http://im.juster.com.br:5280'
+)
+```
+
+Test if your service is working:
+```ruby
+works = ejabberd_admin.is_running? # true/false
+```
 
 ## Development
 

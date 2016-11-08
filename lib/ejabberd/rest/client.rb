@@ -5,11 +5,11 @@ require 'faraday'
 require 'active_support/all'
 require 'base64'
 
-require_relative 'client/version'
-
 module Ejabberd
   module Rest
     class Client
+      VERSION = "0.1.0"
+
       attr_reader :access_token
 
       def initialize(options = {})
