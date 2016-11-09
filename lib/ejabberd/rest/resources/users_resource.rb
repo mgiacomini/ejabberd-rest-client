@@ -4,6 +4,8 @@ module Ejabberd
       class UsersResource < ResourceKit::Resource
 
         resources do
+          default_handler(401) { raise ::Ejabberd::NotAuthorizedError, 'This request requires authentication' }
+
           action :register, 'POST /api/register' do
             body { |object| JSON.generate(object) }
             handler(200) { |response| true }

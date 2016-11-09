@@ -4,6 +4,8 @@ module Ejabberd
       class MucResource < ResourceKit::Resource
 
         resources do
+          default_handler(401) { raise ::Ejabberd::NotAuthorizedError, 'This request requires authentication' }
+
           action :create_room, 'POST /api/create_room' do
             body { |object| JSON.generate(object) }
             handler(200) { |response| true }
