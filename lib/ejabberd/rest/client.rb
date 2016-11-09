@@ -24,12 +24,7 @@ module Ejabberd
 
       def self.resources
         {
-            #bitstreams: ::Dspace::Resources::BitstreamResource,
-            #items: ::Dspace::Resources::ItemResource,
-            #collections: ::Dspace::Resources::CollectionResource,
-            #communities: ::Dspace::Resources::CommunityResource,
             status: Ejabberd::Rest::Resources::StatusResource
-            #authentication: ::Dspace::Resources::AuthenticationResource
         }
       end
 
