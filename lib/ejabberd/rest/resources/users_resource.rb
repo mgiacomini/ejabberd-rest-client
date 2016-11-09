@@ -28,6 +28,11 @@ module Ejabberd
             body { |object| JSON.generate(object) }
             handler(200) { |response| true }
           end
+
+          action :sessions_info, 'POST /api/user_sessions_info' do
+            body { |object| JSON.generate(object) }
+            handler(200) { |response| JSON.parse(response.body) }
+          end
         end
 
       end

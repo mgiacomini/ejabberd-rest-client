@@ -31,4 +31,10 @@ RSpec.describe Ejabberd::Rest::Resources::UsersResource, resource_kit: true do
     end
   end
 
+  it 'get information about all sessions of a user' do
+    expect(resource).to have_action(:sessions_info).that_handles(200).at_path('/api/user_sessions_info').with_verb(:post) do |handled|
+      expect(handled).to be_kind_of(Array)
+    end
+  end
+
 end
