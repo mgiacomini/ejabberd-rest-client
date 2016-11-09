@@ -18,6 +18,16 @@ module Ejabberd
             body { |object| JSON.generate(object) }
             handler(200) { |response| true }
           end
+
+          action :room_affiliations, 'POST /api/get_room_affiliations' do
+            body { |object| JSON.generate(object) }
+            handler(200) { |response| JSON.parse(response.body) }
+          end
+
+          action :room_occupants, 'POST /api/get_room_occupants' do
+            body { |object| JSON.generate(object) }
+            handler(200) { |response| JSON.parse(response.body) }
+          end
         end
 
       end
