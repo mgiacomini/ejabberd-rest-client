@@ -6,8 +6,8 @@ require 'ejabberd/rest/client'
 Gem::Specification.new do |spec|
   spec.name = 'ejabberd-rest-client'
   spec.version = Ejabberd::Rest::Client::VERSION
-  spec.authors = ['Mauricio Giacomini Girardello']
-  spec.email = ['mauriciogiacomini4@gmail.com']
+  spec.authors = ['Mauricio Giacomini Girardello', 'Nonato Web']
+  spec.email = ['mauriciogiacomini4@gmail.com', 'nonato.web@gmail.com']
 
   spec.summary = %q{Ruby implementation of ejabberd admin rest api}
   spec.description = %q{Ruby implementation of ejabberd admin rest api}
