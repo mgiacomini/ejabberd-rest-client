@@ -28,7 +28,7 @@ module Ejabberd
             #items: ::Dspace::Resources::ItemResource,
             #collections: ::Dspace::Resources::CollectionResource,
             #communities: ::Dspace::Resources::CommunityResource,
-            #status: ::Dspace::Resources::StatusResource,
+            status: Ejabberd::Rest::Resources::StatusResource
             #authentication: ::Dspace::Resources::AuthenticationResource
         }
       end
@@ -38,7 +38,7 @@ module Ejabberd
       end
 
       def is_running?
-     #   resource(:status).test
+        resource(:status).running?
       end
 
       def method_missing(name, *args, &block)
