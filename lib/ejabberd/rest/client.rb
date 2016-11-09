@@ -24,7 +24,8 @@ module Ejabberd
 
       def self.resources
         {
-            status: Ejabberd::Rest::Resources::StatusResource
+            status: Ejabberd::Rest::Resources::StatusResource,
+            users: Ejabberd::Rest::Resources::UsersResource
         }
       end
 
