@@ -3,7 +3,7 @@ require 'base64'
 module Ejabberd
   module Rest
     class Client
-      VERSION = "0.1.0"
+      VERSION = "0.1.2"
 
       attr_reader :access_token
 
