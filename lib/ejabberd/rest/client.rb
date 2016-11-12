@@ -24,6 +24,7 @@ module Ejabberd
 
       def self.resources
         {
+            mucs: Ejabberd::Rest::Resources::MucResource,
             status: Ejabberd::Rest::Resources::StatusResource,
             users: Ejabberd::Rest::Resources::UsersResource
         }

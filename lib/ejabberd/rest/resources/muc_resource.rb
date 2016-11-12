@@ -16,6 +16,16 @@ module Ejabberd
             handler(200) { |response| true }
           end
 
+          action :send_direct_invitation, 'POST /api/send_direct_invitation' do
+            body { |object| JSON.generate(object) }
+            handler(200) { |response| true }
+          end
+
+          action :subscribe_room, 'POST /api/subscribe_room' do
+            body { |object| JSON.generate(object) }
+            handler(200) { |response| true }
+          end
+
           action :destroy_room, 'POST /api/destroy_room' do
             body { |object| JSON.generate(object) }
             handler(200) { |response| true }
